@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000">
+    <title>500: INTERNAL SERVER ERROR</title>
+    <style>
+        html {
+            font-size: 62.5%;
+            box-sizing: border-box;
+            height: 100%;
+        }
+        *, ::after, ::before {
+            box-sizing: inherit;
+        }
+        body {
+            font-family: 'SF Pro Text', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+            font-size: 1.6rem;
+            line-height: 1.65;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        a {
+            color: #0070f3;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #0056b3;
+        }
+        .container {
+            max-width: 800px;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .error-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .devinfo-container {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 1rem;
+            margin: 1rem 0;
+            background-color: #fafafa;
+        }
+        .error-code {
+            font-size: 1.8rem;
+            color: #ff0000;
+        }
+        .note {
+            padding: 1rem;
+            border-radius: 5px;
+            background-color: #e0f7fa;
+            color: #00796b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="error-title">This Serverless Function has crashed.</h1>
+        <p>Your connection is working correctly.</p>
+        <p>Nashbot is working correctly.</p>
+        
+        <div class="devinfo-container">
+            <span class="error-code"><strong>500</strong>: INTERNAL_SERVER_ERROR</span>
+            <p>ID: <code id="random-id"></code></p>
+        </div>
+        
+        <p>
+            If you are a visitor, contact the website owner or try again later.
+        </p>
+        <p class="note">
+            If you are the owner, please resolve the issue as soon as possible.
+        </p>
+    </div>
+
+    <script>
+        function generateRandomId() {
+            return 'pussy-' + Math.random().toString(36).substr(2, 9);
+        }
+        
+        document.getElementById('random-id').textContent = generateRandomId();
+    </script>
+</body>
+</html>
